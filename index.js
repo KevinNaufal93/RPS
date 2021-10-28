@@ -5,6 +5,8 @@ const port = 3000;
 app.set('view engine', 'ejs');
 
 app.use('/assets', express.static('assets')); //naming public as assets isnt okay, change later
+app.use('/scripts', express.static('scripts')); //naming public as assets isnt okay, change later
+
 
 app.get('/', (req,res) => {
     res.render('frontpage')
