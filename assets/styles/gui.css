@@ -1,0 +1,22 @@
+.buttonback {
+    margin-left: -2rem;
+    padding-left: 0rem;
+}
+
+input {
+    color: none !important;
+}
+
+.refresh {
+    text-align: center;
+}
+
+.refresh-btn {
+    max-width: 3rem;
+    height: auto;
+    cursor: pointer;
+}
+
+.refresh-btn:hover {
+    transform: scale(1);
+}

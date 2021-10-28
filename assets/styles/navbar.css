@@ -1,0 +1,22 @@
+.navbar {
+    opacity: 0.5;
+    padding-left: 30px;
+    padding-right: 30px;
+    line-height: 1.5;
+    font-size: 1rem;
+}
+
+.navbar-brand {
+    color: white;
+    padding-right: 70px;
+}
+
+.nav-link {
+    font-size: 1rem;
+    padding-left: 30px;
+    margin-left: 50px;
+}
+
+.navbar-collapse {
+    color: white;
+}

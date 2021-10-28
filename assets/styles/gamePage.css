@@ -1,0 +1,109 @@
+body {
+    background-color: #d3ac68;
+}
+
+.logo {
+    display: flex;
+    flex-direction: row;
+}
+
+.result {
+    text-align: center;
+}
+
+.figure {
+    height: 10rem;
+    text-align: center;
+}
+
+.chosen {
+    background-color: #f0eaea;
+    border-radius: 1rem;
+}
+
+.choice-hover:hover {
+    transform: scale(2) rotate(30deg);
+}
+
+.choice-player {
+    max-width: 5rem;
+    height: auto;
+    margin: 1rem;
+    cursor: pointer;
+}
+
+.choice-com {
+    max-width: 5rem;
+    height: auto;
+    margin: 1rem;
+}
+
+.player {
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 0.2rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+.vs {
+    color: red;
+    font-size: 8rem;
+    font-weight: bolder;
+    font-family: Arial, Helvetica, sans-serif;
+    display: block;
+    margin-top: 12.5rem;
+    margin-bottom: 3rem;
+}
+
+.win-player, 
+.win-com {
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 0.2rem;
+    font-weight: bold;
+    font-size: 1.3rem;
+    padding-top: 0.1rem;
+    padding-bottom: 0.1rem;
+    margin-top: 10rem;
+    background-color: #64b86c;
+    transform: rotate(-30deg);
+    height: 10rem;
+    padding-top: 2.5rem;
+    margin-bottom: 10rem;
+}
+
+.win-player {
+    display: none;
+}
+
+.win-com {
+    display: none;
+}
+
+.draw {
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 0.2rem;
+    font-weight: bold;
+    font-size: 1.3rem;
+    padding-top: 0.1rem;
+    padding-bottom: 0.1rem;
+    margin-top: 10rem;
+    background-color: #0f7019;
+    transform: rotate(30deg);
+    height: 10rem;
+    padding-top: 3.5rem;
+    margin-bottom: 10rem;
+}
+
+.draw {
+    display: none;
+}
+
+@media (max-width: 120px) {
+    .vs {
+        margin-top: 2rem !important;
+    }
+}
