@@ -7,11 +7,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rock Paper Scissors</title>
-    <link rel="stylesheet" href="../css/bootstrap.min.css">
-    <link rel="stylesheet" href="../assets/styles/gamePage.css"> <!--Page specific style-->
-    <link rel="stylesheet" href="../assets/styles/navbar.css"> <!--navbar-->
-    <link rel="stylesheet" href="../assets/styles/gui.css"> <!--gui-->
-    <script src="../scripts/actions.js" defer></script>
+    <link rel="stylesheet" href="assets/styles/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/styles/gamePage.css"> <!--Page specific style-->
+    <link rel="stylesheet" href="assets/styles/navbar.css"> <!--navbar-->
+    <link rel="stylesheet" href="assets/styles/gui.css"> <!--gui-->
+    <script src="/scripts/actions.js" defer></script>
 </head>
 
 <body>
@@ -19,7 +19,7 @@
         <a class="navbar-brand" href="#">Rock Paper Scissors</a>
         <div class="collapse navbar-collapse">
             <div class="navbar-nav ">
-                <input type="button" value="Back" onClick="location.href='frontPage.html'">
+                <input type="button" value="Back" onClick="location.href='/'">
             </div>
         </div>
     </nav>
@@ -33,15 +33,15 @@
                 </h1>
                 <div class="row row-cols-1 justify-content-xl-center">
                     <figure class="col-xl-7 figure" id="batu">
-                        <input type="image" src="../assets/images/moves/batu.png" class="choice-player choice-hover"
+                        <input type="image" src="assets/images/moves/batu.png" class="choice-player choice-hover"
                             onClick="getChoice(1)">
                     </figure>
                     <figure class="col-xl-7 figure" id="kertas">
-                        <input type="image" src="../assets/images/moves/kertas.png" class="choice-player choice-hover"
+                        <input type="image" src="assets/images/moves/kertas.png" class="choice-player choice-hover"
                             onClick="getChoice(2)">
                     </figure>
                     <figure class="col-xl-7 figure" id="gunting">
-                        <input type="image" src="../assets/images/moves/gunting.png" class="choice-player choice-hover"
+                        <input type="image" src="assets/images/moves/gunting.png" class="choice-player choice-hover"
                             onClick="getChoice(0)">
                     </figure>
                 </div>
@@ -77,13 +77,13 @@
                 </h1>
                 <div class="row row-cols-1 justify-content-center">
                     <figure class="col-xl-7 pt-4 figure" id="com-batu">
-                        <img src="../assets/images/moves/batu.png" alt="batu" class="choice-com">
+                        <img src="assets/images/moves/batu.png" alt="batu" class="choice-com">
                     </figure>
                     <figure class="col-xl-7 pt-4 figure" id="com-kertas">
-                        <img src="../assets/images/moves/kertas.png" alt="kertas" class="choice-com">
+                        <img src="assets/images/moves/kertas.png" alt="kertas" class="choice-com">
                     </figure>
                     <figure class="col-xl-7 pt-4 figure" id="com-gunting">
-                        <img src="../assets/images/moves/gunting.png" alt="gunting" class="choice-com">
+                        <img src="assets/images/moves/gunting.png" alt="gunting" class="choice-com">
                     </figure>
                 </div>
             </div>
@@ -92,7 +92,7 @@
         <!-- button refresh -->
         <section class="row mt-5 mb-5 refresh">
             <figure onclick="refreshGame()" class="col">
-                <img src="../assets/images/moves/refresh.png" class="refresh-btn" alt="refresh">
+                <img src="assets/images/moves/refresh.png" class="refresh-btn" alt="refresh">
             </figure>
         </section>
     </div>
