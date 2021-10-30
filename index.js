@@ -15,9 +15,19 @@ app.get("/register", (req, res) => {
   res.render("register");
 });
 
+app.post("/register/user", (req, res) =>{
+  //ToDo:
+  //send data to DB
+})
+
 app.get("/login", (req, res) => {
   res.render("login");
 });
+
+app.post("/login/user", (req, res) =>{
+  //ToDo:
+  //send data to DB
+})
 
 app.get("/play", (req, res) => {
   res.render("mainPage");
