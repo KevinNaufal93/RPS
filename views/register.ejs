@@ -41,21 +41,22 @@
 
         <header>Register</header>
 
-        <form action="" method="POST">
+        <form action="/register" method="POST">
             <div class="input-group input-group-sm mb-3">
-                <input type="text" name="username" class="form-control" placeholder="Please input username" aria-describedby="inputGroup-sizing-sm" required>
+                <input type="text" id="username" name="username" class="form-control" placeholder="Please input username" aria-describedby="inputGroup-sizing-sm" required>
             </div>
 
             <div class="input-group input-group-sm mb-3">
-                <input type="email" name="email" class="form-control" placeholder="Please input your email" aria-describedby="inputGroup-sizing-sm" required>
+                <input type="email" id="email" name="email" class="form-control" placeholder="Please input your email" aria-describedby="inputGroup-sizing-sm" required>
             </div>
 
             <div class="input-group input-group-sm mb-3">
-                <input type="password" name="password" class="form-control" placeholder="Please input password" aria-describedby="inputGroup-sizing-sm" required>
+                <input type="password" id="password" name="password" class="form-control" placeholder="Please input password" aria-describedby="inputGroup-sizing-sm" required>
             </div>
+            <button type="submit" class="btn-light btnReg" value="Register">Register Now</button>
         </form>
 
-        <button type="submit" class="btn-light btnReg">Register Now</button>
+        
        
     </div>
 </body>

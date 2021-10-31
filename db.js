@@ -8,5 +8,4 @@ const client = new Client({
     database: 'RPS'
 })
 
-client.connect()
-
+module.exports = { client };
