@@ -45,7 +45,6 @@ app.post("/login", async (req, res) => {
   let { username, password } = req.body;
   console.log({username, password})
   console.log(`${username}'s has passed into log in API`)
-  req.session.user = req.body.username;
   const findUser = await pool.query(`SELECT * FROM userGame WHERE userGame.userName = '${req.body.username}' AND userGame.userPassword = '${req.body.password}'`);
   res.status(201).redirect('/')
   }
