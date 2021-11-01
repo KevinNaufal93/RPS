@@ -15,4 +15,8 @@ app.get("/play", (req, res) => {
   res.render("mainPage");
 });
 
+app.get("/about", (req, res) => {
+  res.render("aboutPage");
+});
+
 app.listen(port, console.log("server running on port " + port));
