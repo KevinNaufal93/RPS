@@ -8,4 +8,6 @@ const pool = new Pool({
     database: 'rps'
 })
 
+
+
 module.exports =  pool;

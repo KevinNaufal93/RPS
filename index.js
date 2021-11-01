@@ -2,6 +2,8 @@ const express = require("express");
 const app = express();
 const port = 3000;
 const pool = require("./database/db");
+const session = require("express-session");
+const router = express.Router();
 
 app.use(express.urlencoded({ extended: false} ));
 app.use(express.json()) // taking req.body
@@ -11,7 +13,6 @@ app.use("/assets", express.static("assets")); //naming public as assets isnt oka
 app.use("/scripts", express.static("scripts")); 
 app.use("/database", express.static("db")); 
 
-const users = []
 
 app.get("/", (req, res) => {
   res.render("frontpage");
@@ -43,10 +44,10 @@ app.post("/login", async (req, res) => {
   try {
   let { username, password } = req.body;
   console.log({username, password})
-  console.log(`${username}'s has passed into POST API`)
+  console.log(`${username}'s has passed into log in API`)
+  req.session.user = req.body.username;
   const findUser = await pool.query(`SELECT * FROM userGame WHERE userGame.userName = '${req.body.username}' AND userGame.userPassword = '${req.body.password}'`);
-  users.push({name: req.body.username});
-  res.status(201).redirect('/').send({ message: 'User found' });
+  res.status(201).redirect('/')
   }
   catch (err) {
     console.log(err.message, err)
@@ -90,5 +91,6 @@ app.post("/updateUser", async (req, res) =>{
 app.get("/play", (req, res) => {
   res.render("mainPage");
 });
+
 
 app.listen(port, console.log("server running on port " + port));
