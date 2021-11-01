@@ -1,13 +1,15 @@
 const express = require("express");
 const app = express();
 const port = 3000;
-const { client } = require("./db");
+const { client } = require("./database/db");
 
+app.use(express.urlencoded({ extended: false} ));
 app.set("view engine", "ejs");
 
 app.use("/assets", express.static("assets")); //naming public as assets isnt okay, change later
 app.use("/scripts", express.static("scripts")); 
-app.use(express.urlencoded({ extended: true} ));
+app.use("/database", express.static("db")); 
+
 
 
 app.get("/", (req, res) => {
@@ -45,14 +47,17 @@ app.get("/register", (req, res) => {
     let { username, email, password } = req.body;
     console.log({username, email, password})
     console.log(`data for ${username}'s has passed into POST API`)
-    client.query(`INSERT INTO user_game (username, email, password) VALUES ($1, $2, $3) RETURNING user_game_id, password`, [username, email, password],
+    client.query(`INSERT INTO "user_game" (username, email, password) VALUES ($1, $2, $3) RETURNING user_game_id, password`, [username, email, password],
               (err, results) => {
                 if (err) {
+                  console.log(err)
                   throw err;
                 } else {
                   console.log(results.rows);
                   res.redirect("/");
                 }
+                res.status(201).send(`User added with ID: ${results.user_game_id}`)
+                client.end();
               }
             )
           });
