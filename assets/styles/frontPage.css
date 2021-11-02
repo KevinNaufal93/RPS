@@ -1,27 +1,224 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
 /* style */
 
-.navbar  {
+body {
+    background: black;
+}
+
+
+/* style */
+.allPage {
     background-color: black;
+}
+
+.navbar {
     opacity: 0.5;
-    margin-left: -1%;
-    margin-right: -1%;
+}
+.logo  {
+    margin-left: -2%;
+    margin-right: -2%;
+    padding-left: 8%;
+}
+
+.homeWorkContactAbout {
+    margin-left: 10%;
+    border: -50%;
+}
+
+.loginSignup {
+    padding-right: 5%;
 }
 
 .frontPage {
     background-image: url("../images/paginates/main-bg.jpg");
-    height: 100vh;
+    background-color: black;
+    height: 120%;
     width: 100%;
-    background-repeat: no-repeat;
     background-size: cover;
-    display: table;
-    background-attachment: fixed;
     font-family: Arial, Helvetica, sans-serif;
     color: white;
 }
 
 .header {
-    margin-top: 230px;
-    font-size: 40px;
+    margin-top: 215px;
+    margin-bottom: 60px;
+    letter-spacing: 10px;
+    font-size: 50px;
     font-family: Arial, Helvetica, sans-serif;
 }
 
+.subHeader {
+    letter-spacing: 5px;
+    font-size: 15px;
+    margin-bottom: 55px;
+}
+
+.textStory {
+    margin-top: 250px;
+}
+.nablaSymbol {
+    text-align: center;   
+}
+
+.frontPage2 {
+    background-image: url("../images/paginates/the-games-bg.jpg");
+    background-color: black;
+    height: 120vh;
+    width: 100%;
+    padding-top: 20px;
+    background-size: cover;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+}
+
+.title1Page2 {
+    margin-top: 180px;
+    margin-left: 0px;
+    font-size: 20px;
+    word-spacing: 5px;
+    letter-spacing: 3px;
+}
+
+.title2Page2 {
+    letter-spacing: 8px;
+    word-spacing: -5px;
+    margin-left: 60px;
+    font-size: 100px;
+    
+}
+
+.carouselImage {
+    padding-top: 225px;
+    margin-left: -100px;
+} 
