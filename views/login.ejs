@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Account</title>
+    <link rel="stylesheet" href="assets/styles/registerPage.css" type="text/css" > <!--Page specific style(uses the same format)-->
+    <link rel="stylesheet" href="assets/styles/navbar.css" type="text/css" > <!--navbar-->
+    <link rel="stylesheet" href="assets/styles/gui.css" type="text/css" > <!--gui-->
+    <link rel="stylesheet" href="assets/styles/css/bootstrap.min.css">
+</head>
+
+<body>
+    <nav class="navbar bg-dark navbar-expand-lg justify-content-between">
+        <h2>Login</h2>
+        <div class="collapse navbar-collapse">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="#">WORK</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="#">CONTACT</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="#">ABOUT</a>
+                </li>
+            </ul>
+        </div>
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="nav-link text-white" href="/register">Login</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-white" href="/">Return Home</a>
+            </li>
+        </ul>
+    </nav>
+    <div class="container-fluid">
+
+        <header>Login</header>
+
+        <form action="/login" method="POST">
+            <div class="input-group input-group-sm mb-3">
+                <input type="text" id="username" name="username" class="form-control" placeholder="Please input username" aria-describedby="inputGroup-sizing-sm" required>
+            </div>
+
+            <div class="input-group input-group-sm mb-3">
+                <input type="password" id="password" name="password" class="form-control" placeholder="Please input password" aria-describedby="inputGroup-sizing-sm" required>
+            </div>
+            <button type="submit" value="Login" class="btn-light btnReg">Login Now</button>
+        </form>
+
+        
+       
+    </div>
+</body>
+</html>

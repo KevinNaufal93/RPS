@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rock Paper Scissors</title>
-    <link rel="stylesheet" href="assets/styles/frontPage.css" type="text/css" > <!--Page specific style-->
+    <link rel="stylesheet" href="assets/styles/registerPage.css" type="text/css" > <!--Page specific style-->
     <link rel="stylesheet" href="assets/styles/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/styles/navbar.css" type="text/css" > <!--navbar-->
     <link rel="stylesheet" href="assets/styles/gui.css" type="text/css" > <!--gui-->
@@ -16,7 +16,7 @@
 
 <body>
     <nav class="navbar bg-dark navbar-expand-lg justify-content-between">
-        <a class="navbar-brand" href="#">LOGO</a>
+        <h2>Dashboard</h2>
         <div class="collapse navbar-collapse">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item">
@@ -42,21 +42,29 @@
             </li>
         </ul>
     </nav>
-    <div class="container-fluid frontPage">
-       
-        <div class="title">
-            <h1 class="header text-center"> <strong>PLAY TRADITIONAL GAME</strong></h1>
-            <p class="text-center">Experient new traditional game play</p>
-        </div>
+    <div class="d-flex justify-content-around">
 
+        <form action="/deleteUser" method="POST">
+            <header>Delete User</header>
+            <div class="input-group input-group-sm mb-3">
+                <input type="text" id="userGameId" name="userGameId" class="form-control" placeholder="Please input user game id" aria-describedby="inputGroup-sizing-sm" required>
+            </div>
 
-        <div class="text-center">
-            <a href="/play" class="btn btn-warning text-center">TRIAL</a>
-        </div>
+            <button type="submit" value="Delete" class="btn-light btnReg">Delete</button>
+        </form>
 
-        <div style="margin-top: 90px;">
-            <p class="text-center text-white">The story</p>
-        </div>
+        <form action="/updateUser" method="POST">
+            <header>Change Username</header>
+            <div class="input-group input-group-sm mb-3">
+                <input type="text" id="userGameId" name="userGameId" class="form-control" placeholder="Please input user game id" aria-describedby="inputGroup-sizing-sm" required>
+            </div>
+            <div class="input-group input-group-sm mb-3">
+                <input type="text" id="username" name="username" class="form-control" placeholder="Please input new username" aria-describedby="inputGroup-sizing-sm" required>
+            </div>
+            <button type="submit" value="Login" class="btn-light btnReg">Update</button>
+        </form>
+
+        
     </div>
 </body>
 </html>
