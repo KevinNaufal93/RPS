@@ -7,7 +7,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(express.json()); // taking req.body
 app.set("view engine", "ejs");
 
-app.use("/assets", express.static("assets")); //naming public as assets isnt okay, change later
+app.use("/assets", express.static("assets"));
 app.use("/scripts", express.static("scripts"));
 app.use("/database", express.static("db"));
 
