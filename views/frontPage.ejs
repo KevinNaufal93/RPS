@@ -48,9 +48,11 @@
                 <% } %>
             </li>
             <li class="nav-item">
-                <% if ( user[0] !== undefined ) { %>
-                    <a class="nav-link text-white" href="#">Dashboard</a>
-                <% } else {%>
+                <% if ( role[0] == 'u' ) { %>
+                    <a class="nav-link text-white" href="#">Click the play button below</a>
+                <% } else if ( role[0] == 'A' ) { %>
+                    <a class="nav-link text-white" href="/dashboard">Dashboard</a>
+                <% } else { %>   
                     <a class="nav-link text-white" href="/register">Sign up</a>
                 <% } %>
                 

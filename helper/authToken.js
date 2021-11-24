@@ -1,4 +1,5 @@
 const jwt = require("jsonwebtoken");
+
 module.exports = {
   authToken: (req, res, next) => {
     return jwt.verify(req.token, "1sampai8", (err, decode) => {
@@ -9,4 +10,5 @@ module.exports = {
       next();
     });
   },
+  
 };
