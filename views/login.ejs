@@ -6,10 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Create Account</title>
-    <link rel="stylesheet" href="assets/styles/registerPage.css" type="text/css" > <!--Page specific style(uses the same format)-->
-    <link rel="stylesheet" href="assets/styles/navbar.css" type="text/css" > <!--navbar-->
-    <link rel="stylesheet" href="assets/styles/gui.css" type="text/css" > <!--gui-->
-    <link rel="stylesheet" href="assets/styles/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/styles/registerPage.css" type="text/css" > <!--Page specific style(uses the same format)-->
+    <link rel="stylesheet" href="../assets/styles/navbar.css" type="text/css" > <!--navbar-->
+    <link rel="stylesheet" href="../assets/styles/gui.css" type="text/css" > <!--gui-->
+    <link rel="stylesheet" href="../assets/styles/css/bootstrap.min.css">
 </head>
 
 <body>
@@ -41,7 +41,16 @@
 
         <header>Login</header>
 
-        <form action="/login" method="POST">
+        <form action="/Login/" method="POST">
+            <div>
+                <% if ( userCheck[0] == undefined ) { %>
+                    <h5>please type username and password below</h5>
+                <% } else if ( userCheck == "Invalid User" ) { %>
+                    <h5>Wrong username or password</h5>
+                <% } else { %>
+                    <h5>user exist</h5>
+                <% } %>
+            </div>
             <div class="input-group input-group-sm mb-3">
                 <input type="text" id="username" name="username" class="form-control" placeholder="Please input username" aria-describedby="inputGroup-sizing-sm" required>
             </div>
@@ -52,8 +61,6 @@
             <button type="submit" value="Login" class="btn-light btnReg">Login Now</button>
         </form>
 
-        
-       
     </div>
 </body>
 </html>

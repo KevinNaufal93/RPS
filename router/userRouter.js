@@ -7,7 +7,8 @@ router.get("/Register", userController.getRegister);
 router.post("/Register/", userController.register);
 router.get("/Login", userController.getLogin);
 router.post("/Login/", userController.login);
-router.get("/Dashboar", userController.getDashboard);
+router.get("/Logout/", userController.logout);
+router.get("/Dashboard", userController.getDashboard);
 router.post("/DeleteUser/", userController.deleteUser);
 router.post("/UpdateUser/", userController.updateUser);
 

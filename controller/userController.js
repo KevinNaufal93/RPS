@@ -1,8 +1,18 @@
 const pool = require("../database/db");
+const express = require("express");
+const app = express();
+
+app.use("/assets", express.static("assets"));
+app.use("/scripts", express.static("scripts"));
+app.use("/database", express.static("db"));
+
+const users = [];
+const userStatus = [];
 
 module.exports = {
   landingPage: (req, res) => {
-    res.render("frontpage");
+    res.render("frontpage", {user: users});
+    console.log(`user is currently ${users}`)
   },
 
   getRegister: (req, res) => {
@@ -26,20 +36,38 @@ module.exports = {
   },
 
   getLogin: (req, res) => {
-    res.render("login");
+    res.render("login", {userCheck: userStatus});
+    console.log(userStatus)
+    userStatus.pop()
   },
 
   login: async (req, res) => {
-    const users = [];
     try {
       let { username, password } = req.body;
       console.log({ username, password });
       console.log(`${username}'s has passed into POST API`);
       const findUser = await pool.query(
-        `SELECT * FROM userGame WHERE userGame.userName = '${req.body.username}' AND userGame.userPassword = '${req.body.password}'`
+        `SELECT * FROM userGame WHERE userName = '${req.body.username}' AND userPassword = '${req.body.password}'`
       );
-      users.push({ name: req.body.username });
-      res.status(201).redirect("/").send({ message: "User found" });
+      
+        if (findUser.rowCount > 0) {
+        users.push( req.body.username );
+        res.status(201).redirect("/");
+        } else {
+          userStatus.push("Invalid User")
+          res.status(404).redirect("/login");
+          console.log(userStatus);
+        }
+    } catch (err) {
+      console.log(err.message, err);
+      throw err;
+    }
+  },
+
+  logout: async (req, res) => {
+    try {
+      users.pop();
+      res.status(201).redirect("/");
     } catch (err) {
       console.log(err.message, err);
       throw err;

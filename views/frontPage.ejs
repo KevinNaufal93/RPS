@@ -6,10 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rock Paper Scissors</title>
-    <link rel="stylesheet" href="assets/styles/frontPage.css" type="text/css" > <!--Page specific style-->
-    <link rel="stylesheet" href="assets/styles/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/styles/navbar.css" type="text/css" > <!--navbar-->
-    <link rel="stylesheet" href="assets/styles/gui.css" type="text/css" > <!--gui-->
+    <link rel="stylesheet" href="../assets/styles/frontPage.css" type="text/css" > <!--Page specific style-->
+    <link rel="stylesheet" href="../assets/styles/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/styles/navbar.css" type="text/css" > <!--navbar-->
+    <link rel="stylesheet" href="../assets/styles/gui.css" type="text/css" > <!--gui-->
 </head>
 
 
@@ -23,7 +23,13 @@
                     <a class="nav-link text-white" href="#">HOME</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-white" href="#">HELLO</a>
+                    <% if ( user[0] !== undefined ) { %>
+                     <a class="nav-link text-white" href="#"> Hello, 
+                        <%= user %>
+                    </a>
+                    <% } else { %>
+                        <a class="nav-link text-white" href="#">Hello, unregistered user</a>
+                    <% } %>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link text-white" href="#">CONTACT</a>
@@ -35,10 +41,19 @@
         </div>
         <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-                <a class="nav-link text-white" href="/login">Login</a>
+                <% if ( user[0] !== undefined ) { %>
+                    <a class="nav-link text-white" href="/Logout/">Logout</a>
+                <% } else {%>
+                    <a class="nav-link text-white" href="/login">Login</a>
+                <% } %>
             </li>
             <li class="nav-item">
-                <a class="nav-link text-white" href="/register">Sign up</a>
+                <% if ( user[0] !== undefined ) { %>
+                    <a class="nav-link text-white" href="#">Dashboard</a>
+                <% } else {%>
+                    <a class="nav-link text-white" href="/register">Sign up</a>
+                <% } %>
+                
             </li>
         </ul>
     </nav>
@@ -51,12 +66,17 @@
 
 
         <div class="text-center">
-            <a href="/play" class="btn btn-warning text-center">TRIAL</a>
+            <% if ( user[0] !== undefined ) { %>
+                <a href="/play" class="btn btn-warning text-center">PLAY NOW</a>
+               <% } else { %>
+                <a href="/register" class="btn btn-warning text-center">REGISTER NOW</a>
+               <% } %>
         </div>
 
         <div style="margin-top: 90px;">
             <p class="text-center text-white">The story</p>
         </div>
     </div>
+
 </body>
 </html>
